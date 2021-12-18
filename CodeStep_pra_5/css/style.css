@@ -1,0 +1,117 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #f1f1f1;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header {
+  width: 100%;
+  background-color: #fff;
+}
+
+header h1 {
+  font-size: 1.625rem;
+  height: 140px;
+  line-height: 140px;
+  text-align: center;
+}
+
+header nav {
+  background-color: #121212;
+}
+
+header nav .menu {
+  max-width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  position: relative;
+}
+
+header nav .menu li {
+  width: 25%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+header nav .menu li:hover {
+  background-color: #3c3636;
+}
+
+header nav .menu li a {
+  display: block;
+}
+
+header nav .menu_single_second {
+  visibility: hidden;
+  width: 100%;
+  background-color: #3c3636;
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+header nav .menu_single_second li {
+  width: 25%;
+}
+
+header nav .menu_single_second li a:hover {
+  opacity: 0.7;
+}
+
+header nav .menu_single:hover .menu_single_second {
+  visibility: visible;
+}
+
+header nav .menu_wide:hover .menu_single_second {
+  visibility: visible;
+}
+
+header nav .menu_wide .menu_single_second {
+  visibility: hidden;
+  width: 100%;
+  background-color: #3c3636;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+header nav .menu_wide .menu_single_second li {
+  width: 25%;
+}
+
+header nav .menu_wide .menu_single_second li a:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 0.75rem;
+  }
+}

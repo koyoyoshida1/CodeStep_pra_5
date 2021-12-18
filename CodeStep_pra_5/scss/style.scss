@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #f1f1f1;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header {
+  width: 100%;
+  background-color: #fff;
+
+  h1 {
+    font-size: 1.625rem;
+    height: 140px;
+    line-height: 140px;
+    text-align: center;
+  }
+
+  nav {
+    background-color: #121212;
+
+    .menu {
+      max-width: 1000px;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      position: relative;
+
+      li {
+        width: 25%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+
+        &:hover {
+          background-color: #3c3636;
+        }
+        a {
+          display: block;
+          // リンク範囲を親要素と同じ幅まで広げる方法
+        }
+      }
+
+      &_single {
+        
+        &_second {
+          visibility: hidden;
+          width: 100%;
+          background-color: #3c3636;
+          position: absolute;
+          top: 50px;
+          left: 0;
+          // 初期状態は表示しないため隠す 
+
+          li {
+            width: 25%;
+            
+            a:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+
+        &:hover .menu_single_second {
+          visibility: visible;
+        }
+      }
+
+      &_wide {
+
+        &:hover .menu_single_second {
+          visibility: visible;
+        }
+        
+        .menu_single_second {
+          visibility: hidden;
+          width: 100%;
+          background-color: #3c3636;
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          position: absolute;
+          top: 50px;
+          left: 0;
+
+          li {
+            width: 25%;
+
+            a:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 0.75rem;
+  }
+}
